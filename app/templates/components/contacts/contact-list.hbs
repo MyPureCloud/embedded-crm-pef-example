@@ -1,0 +1,35 @@
+<div id="myBody" style="padding-left: 35px">
+  <div class="w3-twothird w3-container">
+    <h1 class="w3-text-deep-orange">List of Contacts</h1>
+    <table>
+        <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Account</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Priority</th>
+        </thead>
+        <tbody>                
+            {{#each contactList as |contact|}}
+                <tr>
+                    <td>
+                        {{#link-to 'contacts.contact' contact.id}}
+                            {{contact.FirstName}}
+                        {{/link-to}}
+                    </td>
+                    <td>{{contact.LastName}}</td>
+                    <td>{{#link-to "accounts" (query-params Account=contact.Account)}}{{contact.Account}}{{/link-to}}</td>
+                    <td>
+                        {{phone-number phoneNumber=contact.Phone}} 
+                    </td>
+                    <td>{{contact.Email}}</td>
+                    <td>{{contact.Priority}}</td>
+                </tr>                        
+            {{/each}}
+        </tbody>
+    </table>
+  </div>
+</div>
+
+{{yield}}

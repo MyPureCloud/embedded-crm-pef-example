@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <h1>PureCloud Embedded Framework</h1>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-deep-orange.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+        {{window-event-listener}}
+
+        <div class="softphone">
+            <iframe id="softphone" allow="camera *; microphone *" src={{frameWorkURL}} frameborder="0"></iframe>
+        </div>
+        <div class="w3-top">
+            <div class="w3-bar w3-top w3-left-align w3-large" style="height: 40px; background: #ff4f1f;">
+                {{#link-to 'about' class="w3-bar-item w3-button w3-theme genesysLogo"}}<img src="/images/genesys_monogram_detail.png" width="40" height="40" alt="genesys.png">{{/link-to}}
+                {{#link-to 'accounts' (query-params Account=null) class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-text-white"}}Accounts{{/link-to}}
+                {{#link-to 'contacts' (query-params Account=null) class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-text-white"}}Contacts{{/link-to}}
+                {{#link-to 'callLog' class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-text-white"}}Call Logs{{/link-to}}
+                {{#link-to 'config' class="w3-bar-item w3-button w3-hide-small w3-hover-white w3-text-white"}}Config{{/link-to}}
+                
+                <span class="wrapper">
+                    {{input value=queryString type="text" class="header-search" enter=(action "search" queryString)}}    
+                    <span class="fa fa-search searchicon"></span>
+                </span>
+            </div>
+        </div>
+        <div class="w3-sidebar w3-bar-block w3-dark-grey w3-medium" style="width:40px;">
+            <a class="w3-bar-item w3-button" {{action 'openModal' 'modal-main'}} style="padding:5px"><img src="https://dhqbrvplips7x.cloudfront.net/directory/5049/assets/images/svg/person.svg" width="30" height="30"></a>
+            {{#link-to 'about' class="w3-bar-item w3-button sidebar"}}<i class="fa fa-home"></i>{{/link-to}}
+            {{#link-to 'accounts' (query-params Account=null) class="w3-bar-item w3-button sidebar"}}<i class="fa fa-users"></i>{{/link-to}}
+            {{#link-to 'contacts' (query-params Account=null) class="w3-bar-item w3-button sidebar"}}<i class="fa fa-address-book-o"></i>{{/link-to}}
+            {{#link-to 'callLog' class="w3-bar-item w3-button sidebar"}}<i class="fa fa-phone-square"></i>{{/link-to}}
+            {{#link-to 'config' class="w3-bar-item w3-button sidebar"}}<i class="fa fa-cogs"></i>{{/link-to}}
+            <a href="https://github.com/AgnesCorpuz/PureCloud-Embedded-Framework" class="w3-bar-item w3-button" style="padding:10px"><i class="fa fa-github"></i></a>
+            <a href="https://developer.mypurecloud.com/api/embeddable-framework/" class="w3-bar-item w3-button" style="padding:10px"><i class="fa fa-question"></i></a>
+        </div>
+
+        {{outlet}}
+
+        {{#profile-modal enabled=false title="-- Set Status --" id="modal-main"}}
+            <ul>
+                <li onclick={{action "setStatus" "ON_QUEUE"}}>On Queue</li>
+                <li onclick={{action "setStatus" "AVAILABLE"}}>Available</li>
+                <li onclick={{action "setStatus" "BUSY"}}>Busy</li>
+                <li onclick={{action "setStatus" "AWAY"}}>Away</li>
+                <li onclick={{action "setStatus" "BREAK"}}>Break</li>
+                <li onclick={{action "setStatus" "MEAL"}}>Meal</li>
+                <li onclick={{action "setStatus" "MEETING"}}>Meeting</li>
+                <li onclick={{action "setStatus" "TRAINING"}}>Training</li>
+            </ul>
+        {{/profile-modal}}
+    </body>
+    <footer id="myFooter">
+        <div class="w3-container" style="background-color: #5d3e5d">
+            <p style="text-align:center; margin: 0px; color: #FFFFFF;">PureCloud Embedded Framework</p>
+        </div>
+        <div class="w3-container" style="background-color: #6f526f">
+            <p style="text-align:center; margin: 0px; color: #FFFFFF;">Genesys DevFoundry</p>
+        </div>
+    </footer>
+</html>

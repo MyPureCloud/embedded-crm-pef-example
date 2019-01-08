@@ -1,0 +1,40 @@
+<div style="padding: 50px;">
+    {{#link-to 'contacts'}}Back to Contacts{{/link-to}}
+
+    <h1>{{model.FirstName}} {{model.LastName}}</h1>
+
+    <table class="contact-details">
+        <tr>
+            <td>
+                <strong>Account: </strong>
+            </td>
+            <td>
+                {{model.Account}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Phone Number: </strong>
+            </td>
+            <td>
+                {{phone-number phoneNumber=model.Phone}} 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Email: </strong>
+            </td>
+            <td>
+                {{model.Email}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Priority: </strong>
+            </td>
+            <td>
+                {{model.Priority}}
+            </td>
+        </tr>
+    </table>
+</div>

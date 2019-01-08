@@ -1,0 +1,10 @@
+<div id="myBody" style="padding-left: 35px; padding-top: 50px;">
+    <div class="w3-twothird w3-container">
+        {{#each model.messages as |message|}}
+            <div style="padding: 5px; padding-left: 20px; margin-top: 10px; border: 1px solid #888; border-radius:20px;">
+                <p><strong>{{message.name}}: </strong></p>
+                <p>{{message.body}}</p>
+            </div>
+        {{/each}}
+    </div>
+</div>

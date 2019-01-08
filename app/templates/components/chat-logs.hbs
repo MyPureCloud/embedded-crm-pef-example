@@ -1,0 +1,31 @@
+<div id="myBody" style="padding-left: 35px; padding-top: 50;">
+  <div class="w3-twothird w3-container">
+    <h1 class="w3-text-deep-orange">Chat Logs</h1>
+    <table>
+        <thead>
+            <th>Interaction ID</th>
+            <th>Name</th>
+            <th>Notes</th>
+            <th>Priority</th>
+            <th>Association</th>
+            <th>Transcript</th>
+        </thead>
+        <tbody>
+            {{#each chatLogs as |log|}}
+                <tr>
+                    <td>{{log.id}}</td>
+                    <td>{{log.name}}</td>
+                    <td>{{log.notes}}</td>
+                    <td>{{log.priority}}</td>
+                    <td>{{log.association}}</td>
+                    <td>
+                        {{#link-to "transcript.id" log.id}}
+                            Show
+                        {{/link-to}}
+                    </td>
+                </tr>                        
+            {{/each}}
+        </tbody>
+    </table>
+  </div>
+</div>

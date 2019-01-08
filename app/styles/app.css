@@ -1,0 +1,222 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body > div > iframe {
+  width: inherit;
+  height: inherit;
+  border: none;
+}
+
+body {
+  padding-top: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #9aa;
+  font-size: 12px;
+}
+
+th, td {
+  padding: 5px;
+  text-align: center;
+}
+
+input {
+  padding: 5px;
+}
+
+html,body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-bottom: 5px!important;
+  margin-left: 0px;
+}
+
+p {
+  margin-top: 5px!important;
+}
+
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 40px;
+  bottom: 0;
+  height: inherit;
+}
+
+#myBody {
+  padding: 10px;
+  padding-bottom: 160px;
+  height: 100%;
+  margin-bottom: -45px;
+}
+
+#myFooter{
+  /* position: absolute; */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 55px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+td.leftSide {
+  text-align: left;
+}
+
+td.rightSide {
+  text-align: right;
+}
+
+.block label { 
+  display: inline-block; 
+  width: 140px; 
+  text-align: right; 
+}
+
+.block input { 
+  display: inline-block; 
+  width: 180px; 
+  text-align: left; 
+}
+
+.softphone {
+  width: 200;
+  height: 450px;
+  position: fixed;
+  top: 70px;
+  right: 10px;
+}
+
+.modal-fog {
+  background: rgba(30, 30, 30, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.modal-frame {
+  position: absolute;
+  top: 40px;
+  left: 2.3%;
+  border: 1px solid #333;
+  background: #f1f1f1;
+  height: 210px;
+  width: 180px;
+}
+.modal-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height:25px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+.modal-body {
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.genesysLogo {
+  padding: 0px!important;
+}
+
+.sidebar {
+  padding:10px!important;
+}
+
+.header-search{
+  color:white;
+  background-color: #ff8060;
+  border: 0;
+  height: 30px;
+  margin-top:5px;
+  margin-left:20px;
+}
+
+.header-search:focus {
+  outline: none !important;
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+.searchicon { 
+  position: absolute;
+  text-align: right; 
+  top: 4px;
+  right:10px;
+  color: white;
+}
+
+.wrapper { position: relative; }
+
+table.contact-details {
+  border: 0px solid black;
+  padding: 25px;
+}
+
+.contact-details td {
+  text-align: left;
+  margin: 10px;
+  font-size: 1.2em;
+  padding-left:20px;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.phone-number:hover {
+  color: orangered;
+  cursor: pointer;
+}
