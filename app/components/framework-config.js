@@ -70,7 +70,7 @@ export default Component.extend({
                 "text": "#fff"
             },
             {
-                "name": "PureCloud Blue",
+                "name": "Genesys Cloud Blue",
                 "primary": "#41A7CA",
                 "text": "#fff"
             },
@@ -148,7 +148,7 @@ export default Component.extend({
             this.set('frameworkConfig.theme.display', themeName);
         },
         setRegion: function(region){
-            this.set('frameworkConfig.pureCloudRegion', region);
+            this.set('frameworkConfig.genesysCloudRegion', region);
         }
     }
 });

@@ -22,9 +22,9 @@
             {{input type='checkbox' checked=frameworkConfig.enablePEFUrlPop}}
         </div>
         <div style="margin: 10px">
-            <label style="padding-right: 70px">PureCloud Region: </label>
+            <label style="padding-right: 70px">Genesys Cloud Region: </label>
             <select onchange={{action 'setRegion' value='target.value'}} name="pcRegion" id="pcRegion">
-                <option hidden value="">{{frameworkConfig.pureCloudRegion}}</option>
+                <option hidden value="">{{frameworkConfig.genesysCloudRegion}}</option>
                 {{#each regions as |region|}}
                     <option value={{region}}>{{region}}</option>
                 {{/each}}

@@ -93,7 +93,7 @@ window.Framework = {
 
     crmDomain: null,
     initialSetup: function () {
-        console.log("=================  PURECLOUD EMBEDDABLE SETUP ============");
+        console.log("=================  GENESYS CLOUD EMBEDDABLE SETUP ============");
         crmDomain = new URLSearchParams(window.location.search).get('crm_domain');
         console.log("crm_domain : ", decodeURI(crmDomain));
         if (!crmDomain) {

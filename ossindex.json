@@ -1,6 +1,6 @@
 {
-  "author": "PureCloud Labs",
-  "title": "CRM Example Implementation of PureCloud Embeddable Framework",
+  "author": "Genesys Cloud Labs",
+  "title": "CRM Example Implementation of Genesys Cloud Embeddable Framework",
   "logo_url": "https://developer.mypurecloud.com/images/genesys-icon.svg",
   "categories": [
     "example"
@@ -8,7 +8,7 @@
   "tags": [
   ],
   "apis": [
-    "PureCloud Embeddable Framework"
+    "Genesys Cloud Embeddable Framework"
   ],
   "sdks": [
   ]

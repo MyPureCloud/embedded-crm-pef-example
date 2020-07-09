@@ -1,8 +1,8 @@
-# Embedded CRM PureCloud Embedded Framework
+# Embedded CRM Genesys Cloud Embedded Framework
 
-This is a sample project using PureCloud Embeddable Framework. This project is written in Javascript using Ember Framework.
+This is a sample project using Genesys Cloud Embeddable Framework. This project is written in Javascript using Ember Framework.
 
-Different methods of the PureCloud Embeddable Framework are used in this project such as Click to Dial, Screen Pop Up, Process Call Logs and Contact Search.
+Different methods of the Genesys Cloud Embeddable Framework are used in this project such as Click to Dial, Screen Pop Up, Process Call Logs and Contact Search.
 
 ## Integration Points
 
@@ -10,7 +10,7 @@ Different methods of the PureCloud Embeddable Framework are used in this project
 
 This sample contains dynamic setting of the framework.js configuration items.
 
-* `/public/framework.js` Contains modified framework.js file from [PureCloud Embeddable Framework example](https://developer.mypurecloud.com/api/embeddable-framework/purecloud-embeddable-framework-example.html). This file will get dynamic values from URL parameters.
+* `/public/framework.js` Contains modified framework.js file from [Genesys Cloud Embeddable Framework example](https://developer.mypurecloud.com/api/embeddable-framework/purecloud-embeddable-framework-example.html). This file will get dynamic values from URL parameters.
 * `/app/templates/application.hbs` HTML template for the web app. Includes the embedded iframe for the softphone. The 'src' attribute is dynamically generated from data stored in the localStorage. This value could also be generated server side or by any means where the iframe's property can be modified.
 * `/app/components/framework-config.js` Contains the actions for events when the user changes any settings in the configuration page. This calls the service framework-config which handles the actual logic of storing and updating the values to the browser's localStorage.
 * `/app/services/framework-config.js` Contains the logic behind saving/loading the configuration values to and from the localStorage. In production, this is recommended to be put into a proper backend storage/database.

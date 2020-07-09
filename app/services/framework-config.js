@@ -28,8 +28,8 @@ export default Service.extend({
             'display': 'Default Grey'
         });
         
-        // PureCloud Region set default to mypurecloud.com
-        this.set('pureCloudRegion', "mypurecloud.com");
+        // Genesys Cloud Region set default to mypurecloud.com
+        this.set('genesysCloudRegion', "mypurecloud.com");
 
         // Custom Attributes 
         // This is not saved in localStorage as this should be constant anyway
@@ -75,8 +75,8 @@ export default Service.extend({
         if(localStorage.getItem("enablePEFSearchValue") !== null) 
             this.set('enablePEFSearchValue', JSON.parse(localStorage.getItem("enablePEFSearchValue")));
         
-        if(localStorage.getItem("pureCloudRegion") !== null) 
-            this.set('pureCloudRegion', localStorage.getItem("pureCloudRegion"));
+        if(localStorage.getItem("genesysCloudRegion") !== null) 
+            this.set('genesysCloudRegion', localStorage.getItem("genesysCloudRegion"));
     },
 
     saveConfiguration(){
@@ -87,6 +87,6 @@ export default Service.extend({
         localStorage.setItem('theme', JSON.stringify(this.theme));
         localStorage.setItem('enablePEFUrlPop', JSON.stringify(this.enablePEFUrlPop));
         localStorage.setItem('enablePEFSearchValue', JSON.stringify(this.enablePEFSearchValue));
-        localStorage.setItem('pureCloudRegion', this.pureCloudRegion);
+        localStorage.setItem('genesysCloudRegion', this.genesysCloudRegion);
     }
 });
