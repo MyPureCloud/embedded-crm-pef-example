@@ -69,9 +69,9 @@ window.Framework = {
             }
         },
         helpLinks: {
-            InteractionList: "https://help.mypurecloud.com/articles/about-interaction-list/",
-            CallLog: "https://help.mypurecloud.com/articles/about-call-logs/", 
-            Settings: "https://help.mypurecloud.com/articles/about-settings/" 
+            InteractionList: "https://help.genesys.cloud/?p=167050",
+            CallLog: "https://help.genesys.cloud/?p=171939", 
+            Settings: "https://help.genesys.cloud/?p=167069" 
         },
         customInteractionAttributes: (() => {
             let customAttributes = new URLSearchParams(window.location.search).get('customAttributes');
